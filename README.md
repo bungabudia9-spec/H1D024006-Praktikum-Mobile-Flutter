@@ -1,7 +1,6 @@
-# Tugas Praktikum Pemrograman Mobile - Modul 1
-## Implementasi Struktur Data Queue (FIFO) Menggunakan Bahasa Dart
+# Tugas Praktikum Pemrograman Mobile
 
-Repository ini berisi implementasi struktur data **Queue (Antrean)** berbasis prinsip **FIFO (*First In, First Out*)** menggunakan bahasa pemrograman Dart sebagai pemenuhan penugasan praktikum Modul 1 Pemrograman Mobile.
+Repository ini berisi hasil pengerjaan penugasan **Modul 2: Pengenalan dan Desain Framework Flutter** serta arsip implementasi **Modul 1: Struktur Data Queue (FIFO)** pada project `flutter_application_1`.
 
 ---
 
@@ -14,46 +13,57 @@ Repository ini berisi implementasi struktur data **Queue (Antrean)** berbasis pr
 | **Shift KRS** | H |
 | **Program Studi** | Informatika |
 
+---
 
 ---
 
-## 📌 Deskripsi Tugas
+## 🚀 Cara Menjalankan Aplikasi
 
-Penugasan Modul 1 menginstruksikan pembuatan sebuah `class Queue` dengan ketentuan:
-1. Memiliki method **`enqueue(element)`**: untuk memasukkan data baru ke bagian belakang antrean.
-2. Memiliki method **`dequeue()`**: untuk mengeluarkan data paling depan dari antrean sesuai prinsip FIFO (*First In, First Out*).
-3. Penanganan kondisi batas: jika antrean kosong dan dilakukan `dequeue()`, sistem akan memberikan pesan bahwa antrean kosong dan tidak ada data yang dapat dikeluarkan.
+Pastikan dependensi telah terpasang dengan menjalankan `flutter pub get`.
 
----
-
-## 📁 Struktur Direktori
-
-```text
-flutter_application_1/
-├── assets/
-│   └── output.png            # Screenshot hasil output eksekusi program
-├── bin/
-│   ├── all_modul1.dart       # Kumpulan latihan materi dasar Modul 1
-│   └── ...                   # File latihan per subbab modul
-├── lib/
-│   └── main.dart             # Implementasi class Queue dan pengujiannya
-├── pubspec.yaml              # Konfigurasi dependensi project
-└── README.md                 # Dokumentasi dan identitas tugas
-```
-
----
-
-## 🚀 Cara Menjalankan Program
-
-Buka terminal pada direktori root project, lalu jalankan perintah:
-
+### 1. Menjalankan via Browser (Chrome / Edge)
 ```bash
-dart run lib\main.dart
+flutter run -d chrome
+```
+
+### 2. Menjalankan via Windows Desktop
+```bash
+flutter run -d windows
+```
+
+### 3. Menjalankan via Android (Device Fisik / Emulator)
+```bash
+flutter run
+```
+
+### 4. Menjalankan Pengujian Otomatis
+```bash
+flutter test
 ```
 
 ---
 
-## 📋 Hasil Output Eksekusi
+## 📸 Hasil Tampilan Antarmuka (Modul 2)
 
-![Hasil Output Eksekusi](assets/output.png)
+Berikut adalah hasil tampilan antarmuka halaman **List Data Produk** (`ProdukPage`) pada Modul 2:
 
+<p align="center">
+  <img src="assets/flutter2.png" alt="Tampilan List Data Produk Modul 2" width="360"/>
+</p>
+
+---
+
+## 📋 Lampiran Modul 1 (Implementasi Queue FIFO)
+
+Implementasi struktur data Queue berbasis FIFO dari Modul 1 tersimpan di [`lib/main_backup.dart`](lib/main_backup.dart).
+
+Program dapat dijalankan melalui terminal:
+```bash
+dart run lib/main_backup.dart
+```
+
+Hasil eksekusi Modul 1:
+
+<p align="center">
+  <img src="assets/output.png" alt="Hasil Eksekusi Modul 1" width="550"/>
+</p>
