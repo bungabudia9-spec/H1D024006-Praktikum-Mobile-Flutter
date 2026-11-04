@@ -1,6 +1,10 @@
 # Tugas Praktikum Pemrograman Mobile
 
-Repository ini berisi hasil pengerjaan penugasan **Modul 2: Pengenalan dan Desain Framework Flutter** serta arsip implementasi **Modul 1: Struktur Data Queue (FIFO)** pada project `flutter_application_1`.
+Repository ini berisi hasil pengerjaan praktikum Pemrograman Mobile pada project `flutter_application_1`:
+
+- **Modul 1:** Bahasa Pemrograman Dart (Struktur Data Queue FIFO)
+- **Modul 2:** Pengenalan dan Desain Framework Flutter
+- **Modul 3:** Routes, Side Menu, Login dan Local Storage
 
 ---
 
@@ -15,37 +19,29 @@ Repository ini berisi hasil pengerjaan penugasan **Modul 2: Pengenalan dan Desai
 
 ---
 
----
+## 📋 Modul 1: Bahasa Pemrograman Dart
 
-## 🚀 Cara Menjalankan Aplikasi
+Implementasi struktur data Queue berbasis FIFO tersimpan di [`lib/main_backup.dart`](lib/main_backup.dart).
 
-Pastikan dependensi telah terpasang dengan menjalankan `flutter pub get`.
+Menjalankan program melalui terminal:
 
-### 1. Menjalankan via Browser (Chrome / Edge)
 ```bash
-flutter run -d chrome
+dart run lib/main_backup.dart
 ```
 
-### 2. Menjalankan via Windows Desktop
-```bash
-flutter run -d windows
-```
+**Hasil Eksekusi**
 
-### 3. Menjalankan via Android (Device Fisik / Emulator)
-```bash
-flutter run
-```
-
-### 4. Menjalankan Pengujian Otomatis
-```bash
-flutter test
-```
+<p align="center">
+  <img src="assets/output.png" alt="Hasil Eksekusi Modul 1" width="550"/>
+</p>
 
 ---
 
-## 📸 Hasil Tampilan Antarmuka (Modul 2)
+## 📱 Modul 2: Pengenalan dan Desain Framework Flutter
 
-Berikut adalah hasil tampilan antarmuka halaman **List Data Produk** (`ProdukPage`) pada Modul 2:
+Pada modul ini dibuat halaman **List Data Produk** (`ProdukPage`) menggunakan `ListView` dan `Card`.
+
+**Tampilan List Data Produk**
 
 <p align="center">
   <img src="assets/flutter2.png" alt="Tampilan List Data Produk Modul 2" width="360"/>
@@ -53,17 +49,57 @@ Berikut adalah hasil tampilan antarmuka halaman **List Data Produk** (`ProdukPag
 
 ---
 
-## 📋 Lampiran Modul 1 (Implementasi Queue FIFO)
+## 🔐 Modul 3: Routes, Side Menu, Login, dan Local Storage
 
-Implementasi struktur data Queue berbasis FIFO dari Modul 1 tersimpan di [`lib/main_backup.dart`](lib/main_backup.dart).
+Pada modul ini dibuat alur aplikasi dengan halaman login, halaman home, dan side menu (drawer) untuk berpindah halaman. Username yang berhasil login disimpan di local storage memakai package `shared_preferences`, lalu ditampilkan di halaman home. Login memakai akun simulasi `admin` / `admin`.
 
-Program dapat dijalankan melalui terminal:
+| File | Fungsi |
+| :--- | :--- |
+| `lib/login_page.dart` | Form login, validasi, dan menyimpan username |
+| `lib/home_page.dart` | Halaman utama, menampilkan username dari local storage |
+| `lib/sidemenu.dart` | Drawer berisi menu Home dan About |
+| `lib/about_page.dart` | Halaman About |
+
+**Tampilan Aplikasi**
+
+<table align="center">
+  <tr>
+    <td align="center">
+      <img src="assets/login.png" alt="Halaman Login" width="250"/><br/>
+      <sub>Halaman Login</sub>
+    </td>
+    <td align="center">
+      <img src="assets/pop-up.png" alt="Pop-up Login" width="250"/><br/>
+      <sub>Pop-up Notifikasi</sub>
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <img src="assets/homepage.png" alt="Halaman Home" width="250"/><br/>
+      <sub>Halaman Home</sub>
+    </td>
+    <td align="center">
+      <img src="assets/sidebar.png" alt="Side Menu" width="250"/><br/>
+      <sub>Side Menu</sub>
+    </td>
+  </tr>
+</table>
+
+---
+
+## 🚀 Cara Menjalankan Aplikasi
+
+Pastikan dependensi sudah terpasang:
+
 ```bash
-dart run lib/main_backup.dart
+flutter pub get
 ```
 
-Hasil eksekusi Modul 1:
+| Platform | Perintah |
+| :--- | :--- |
+| Browser (Chrome / Edge) | `flutter run -d chrome` |
+| Windows Desktop | `flutter run -d windows` |
+| Android (Device / Emulator) | `flutter run` |
+| Pengujian otomatis | `flutter test` |
 
-<p align="center">
-  <img src="assets/output.png" alt="Hasil Eksekusi Modul 1" width="550"/>
-</p>
+> **Catatan:** Halaman awal pada `lib/main.dart` saat ini mengarah ke `LoginPage` (Modul 3). Untuk menampilkan hasil Modul 2, ubah properti `home` pada `MaterialApp` menjadi `ProdukPage()`.
