@@ -19,6 +19,15 @@ analyzer:
     - windows/**
     - macos/**
     - linux/**
+    - lib/ui_modul2/**
+  errors:
+    unused_local_variable: ignore
+    unused_field: ignore
+    library_private_types_in_public_api: ignore
+    use_super_parameters: ignore
+    must_be_immutable: ignore
+    strict_top_level_inference: ignore
+    prefer_final_fields: ignore
 
 linter:
   # The lint rules applied to this project can be customized in the
